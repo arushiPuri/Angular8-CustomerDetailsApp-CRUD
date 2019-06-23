@@ -1,0 +1,60 @@
+{
+  "customers": [
+    {
+      "name": "Batua",
+      "city": "Jungli",
+      "id": 6
+    },
+    {
+      "name": "Pikachu",
+      "city": "Pokemon",
+      "id": 7
+    },
+    {
+      "name": "Dilip Pahuja",
+      "city": "Pokemoni",
+      "id": 8,
+      "email": "dpahuj1993@gmail.com"
+    },
+    {
+      "name": "Moghlixdv",
+      "city": "JungleBook",
+      "id": 9
+    },
+    {
+      "name": "Arushi Puri Baby",
+      "city": "JungleBook",
+      "id": 11,
+      "email": "arushipuri786@gmail.com",
+      "country": "Australia"
+    },
+    {
+      "name": "Gabriel",
+      "city": "JungleBook",
+      "id": 12
+    },
+    {
+      "name": "Phusuk Vangdu",
+      "city": "JungleBook",
+      "id": 13
+    },
+    {
+      "name": "Moghli",
+      "city": "JungleBook",
+      "id": 14,
+      "email": "hello"
+    },
+    {
+      "name": "Pappu Pager",
+      "city": "JungleBook",
+      "id": 15,
+      "email": "pappu@yahoo.com",
+      "country": "India"
+    },
+    {
+      "name": "Moghli",
+      "city": "JungleBook",
+      "id": 16
+    }
+  ]
+}

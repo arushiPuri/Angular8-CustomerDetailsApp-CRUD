@@ -1,0 +1,11 @@
+<h3 *ngIf="selectedCustomer">
+  Details for {{selectedCustomer.name}}
+</h3>
+
+<div *ngIf="selectedCustomer">
+  <div><span>id: </span>{{selectedCustomer.id}}</div>
+  <div><span>name: </span>{{selectedCustomer.name}}</div>
+  <div><span>email: </span>{{selectedCustomer.email}}</div>
+</div>
+
+<button><a routerLink="/">Back</a></button>

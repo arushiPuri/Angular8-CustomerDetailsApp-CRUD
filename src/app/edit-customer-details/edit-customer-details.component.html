@@ -1,0 +1,26 @@
+<!-- Customer Detail Component is for editing details -->
+<h3>Edit Customer Details</h3>
+
+<div *ngIf="selectedCustomer">
+  <h3>name: {{selectedCustomer.name | uppercase}}</h3>
+  <h3>contactDetails: {{selectedCustomer.contactDetails}}</h3>
+  <h3>id: {{selectedCustomer.id}}</h3>
+  <h3>biography: {{selectedCustomer.biography}}</h3>
+  <div>
+    <label>Name:
+      <input [(ngModel)]="selectedCustomer.name" placeholder="name" />
+    </label><br/><br/>
+    <label>Email:
+      <input [(ngModel)]="selectedCustomer.email" placeholder="email" />
+    </label><br/><br/>
+    <label>Id:
+      <input [(ngModel)]="selectedCustomer.id" placeholder="id" />
+    </label><br/><br/>
+    <label>Country:
+      <input [(ngModel)]="selectedCustomer.country" placeholder="country" />
+    </label><br/><br/>
+  </div>
+  <!-- <a routerLink="/"><button>Submit</button></a><br/><br/> -->
+  <button (click)="onClickUpdateCustomer(selectedCustomer, selectedCustomer.id)">Submit</button><br/><br/>
+  <a routerLink="/">Back</a>
+</div>

@@ -1,0 +1,34 @@
+<h3 style="text-align: center;">
+  Customer Datails
+</h3>
+<div class="container" *ngIf="customers">
+  <div class="row border" style="background-color: rgb(148, 148, 212)">
+    <div class="col" style="text-align: center">
+      ID
+    </div>
+    <div class="col">
+      Name
+    </div>
+    <div class="col">
+      Email
+    </div>
+    <div class="col">
+      Country
+    </div>
+  </div>
+  <div class="row border" style="background-color: rgb(195, 195, 224)" *ngFor="let customer of customers; let i = index">
+      <div class="col">
+        <button type=button (click)="onClickDeleteCustomer(customer.id, i)"><i class="fas fa-trash-alt"></i></button>
+        <a routerLink="/edit/{{customer.id}}">Edit</a>
+        {{customer.id}}
+      </div> 
+      <div class="col">
+        <a routerLink="/show/{{customer.id}}">{{ customer.name }}</a>
+      </div>
+      <div class="col">{{ customer.email }}</div>
+      <div class="col">{{ customer.country }}</div>
+    </div>
+</div>
+
+<button class="btn btn-primary" (click)="onClickCreateCustomer()">Add Customer James Bond</button>
+<!-- <a routerLink="add-customer"><button class="btn btn-primary">Add Customer</button></a> -->
