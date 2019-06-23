@@ -1,4 +1,4 @@
-<!-- Customer Detail Component is for editing details -->
+<!-- Edit Customer Details Component is for editing details -->
 <h3>Edit Customer Details</h3>
 
 <div *ngIf="selectedCustomer">
@@ -20,7 +20,7 @@
       <input [(ngModel)]="selectedCustomer.country" placeholder="country" />
     </label><br/><br/>
   </div>
-  <!-- <a routerLink="/"><button>Submit</button></a><br/><br/> -->
+
   <button (click)="onClickUpdateCustomer(selectedCustomer, selectedCustomer.id)">Submit</button><br/><br/>
-  <a routerLink="/">Back</a>
+  <a routerLink="/"><button>Back</button></a><br/><br/>
 </div>

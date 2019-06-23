@@ -1,3 +1,19 @@
-<p>
-  add-customer works!
-</p>
+<!-- Add Customer Details Component is for editing details -->
+<div class="container">
+  <h3>Add Customer Details</h3>
+
+  <div>
+    <label>Name:
+      <input [(ngModel)]="customerDetails.name" placeholder="name" />
+    </label><br/><br/>
+    <label>Email:
+      <input [(ngModel)]="customerDetails.email" placeholder="email" />
+    </label><br/><br/>
+    <label>Country:
+      <input [(ngModel)]="customerDetails.country" placeholder="country" />
+    </label><br/><br/>
+  </div>
+    <button (click)="onClickCreateCustomer(customerDetails)">Submit</button><br/><br/>
+    <a routerLink="/"><button class="btn btn-primary">Back</button></a>
+
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { Customer } from '../data.model';
 
 @Component({
   selector: 'app-add-customer',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCustomerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
-  ngOnInit() {
+  customers: Array<Customer>;
+  customerDetails: Customer = {
+    name: "",
+    email: "",
+    country: "",
   }
 
+  ngOnInit() {
+    this.data.getCustomers().subscribe((data: Array<Customer>) => {
+      this.customers = data
+      console.log(this.customers) 
+    })
+  }
+
+  onClickCreateCustomer() {
+    this.data.createCustomer(this.customerDetails).subscribe((data: Customer) => {
+      console.log(data);
+      this.customers.push(data);
+    }) 
+  }
 }
